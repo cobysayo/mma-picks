@@ -1,7 +1,12 @@
 export type Fighter = {
-    name: string;
-    image: string;
-    stats: string;
+    headshot: string,
+    fullName: string,
+    age: string,
+    height: string,
+    reach: string,
+    weightClass: string,
+    weight: string,
+    record: string
 }
 
 export type FightData = {

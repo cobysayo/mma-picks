@@ -27,18 +27,26 @@ const FighterCard = ({fighter, count}: FighterCardProps) => {
           component="img"
           height="254"
           width="auto"
-          image={fighter.image}
-          alt={fighter.name}
+          image={fighter.headshot}
+          alt={fighter.fullName}
         />
         <CardContent sx={{width:200, height:'100%'}}>
           <div style={{display: 'flex'}}>
             <Checkbox checked={isChecked} color="success" sx={{marginLeft:'auto'}}/>
           </div>
           <Typography gutterBottom variant="h5">
-            {fighter.name}
+            {fighter.fullName}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            {fighter.stats}
+            {fighter.age}
+            <br/>
+            {fighter.height}
+            <br/>
+            {fighter.reach}
+            <br/>
+            {fighter.weight}
+            <br/>
+            {fighter.record}
           </Typography>
         </CardContent>
       </CardActionArea>

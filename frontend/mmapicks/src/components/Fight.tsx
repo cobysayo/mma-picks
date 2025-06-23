@@ -29,6 +29,7 @@ const Fight = ({data, count}: FightProps) => {
     const styles = useCSS()
 
     return <div style={styles.fightCardContainer}>
+        {/* TODO: add weight class */}
         <FighterCard fighter={data.fighters[0]} count={count}/>
         <FighterCard fighter={data.fighters[1]} count={count}/>
     </div>
