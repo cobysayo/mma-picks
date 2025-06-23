@@ -13,7 +13,13 @@ const useCSS = () => {
     return {
         fightCardContainer: {
             display:'flex',
-            justifyContent:'center'
+            justifyContent:'center',
+            marginLeft:'350px',
+            marginRight:'350px',
+            marginTop:'10px',
+            border: '2px solid',
+            borderRadius: '10px',
+            padding:'5px' 
         }
     }
 }
@@ -28,10 +34,12 @@ const useCSS = () => {
 const Fight = ({data, count}: FightProps) => {
     const styles = useCSS()
 
-    return <div style={styles.fightCardContainer}>
-        {/* TODO: add weight class */}
-        <FighterCard fighter={data.fighters[0]} count={count}/>
-        <FighterCard fighter={data.fighters[1]} count={count}/>
+    return <div>
+        <div style={styles.fightCardContainer}>
+            <div style={{marginRight:'50px', minWidth:'110px', maxWidth:'110px' }}> {data.fighters[0].weightClass}</div>
+            <FighterCard fighter={data.fighters[0]} count={count}/>
+            <FighterCard fighter={data.fighters[1]} count={count}/>
+        </div>
     </div>
 }
 

@@ -30,8 +30,9 @@ app.get('/fights', (req, res) => __awaiter(void 0, void 0, void 0, function* () 
                     yield axios_1.default.get(fightList[i].competitors[j].athlete.$ref).then((result) => __awaiter(void 0, void 0, void 0, function* () {
                         const athlete = result.data;
                         yield axios_1.default.get(athlete.records.$ref).then((result) => {
+                            var _a;
                             fight.push({
-                                headshot: athlete.headshot.href,
+                                headshot: ((_a = athlete.headshot) === null || _a === void 0 ? void 0 : _a.href) || 'https://secure.espncdn.com/combiner/i?img=/i/headshots/nophoto.png',
                                 fullName: athlete.fullName,
                                 age: athlete.age,
                                 height: athlete.displayHeight,

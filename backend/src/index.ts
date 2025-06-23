@@ -25,7 +25,7 @@ app.get('/fights',  async (req, res) => {
 
                         await axios.get(athlete.records.$ref).then( (result) => {
                             fight.push({
-                            headshot: athlete.headshot.href,
+                            headshot: athlete.headshot?.href || 'https://secure.espncdn.com/combiner/i?img=/i/headshots/nophoto.png',
                             fullName: athlete.fullName,
                             age: athlete.age,
                             height: athlete.displayHeight,

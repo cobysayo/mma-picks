@@ -38,15 +38,15 @@ const FighterCard = ({fighter, count}: FighterCardProps) => {
             {fighter.fullName}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            {fighter.age}
+            {`Age: ${fighter.age}`}
             <br/>
-            {fighter.height}
+            {`Height: ${fighter.height}`}
             <br/>
-            {fighter.reach}
+            {`Reach: ${fighter.reach}`}
             <br/>
-            {fighter.weight}
+            {`Weight: ${fighter.weight}`}
             <br/>
-            {fighter.record}
+            {`Record: ${fighter.record}`}
           </Typography>
         </CardContent>
       </CardActionArea>
